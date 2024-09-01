@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Pomodoro Timer</h2>
+    <div class="input-container">
+        <label for="hoursInput">Hours:</label>
+        <input type="number" id="hoursInput" min="0" placeholder="00">
+        <label for="minutesInput">Minutes:</label>
+        <input type="number" id="minutesInput" min="0" placeholder="00">
+        <label for="secondsInput">Seconds:</label>
+        <input type="number" id="secondsInput" min="0" placeholder="00">
+    </div>
+    <div class="controls">
+        <button id="startBtn" onclick="startTimer()">Start Timer</button>
+        <button id="breakBtn" onclick="startBreak()">Start Break</button>
+        <button id="stopBtn" onclick="stopTimer()">Stop Timer</button>
+    </div>
+    <div class="task-container">
+        <input type="text" id="taskInput" placeholder="Add a task">
+        <button id="addTaskBtn" onclick="addTask()">Add Task</button>
+    </div>
+    <ul id="taskList" class="task-list"></ul>
+    <audio id="alertSound" src="alert.mp3"></audio>
+    <script src="index.js"></script>
+</body>
+</html>
