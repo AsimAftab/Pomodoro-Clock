@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+    <h2 id="title">Countdown Timer</h2>
+
+    <div class="countdown-container">
+        <div class="countdown">
+            <div class="time" id="countdownHour">00</div>
+            <div class="time" id="countdownMinute">00</div>
+            <div class="time" id="countdownSecond">00</div>
+        </div>
+        <div class="countdown-controls">
+            <input type="number" id="countdownInput" min="1" placeholder="Minutes">
+            <button id="startCountdownBtn" onclick="startCountdownTimer()">Start Countdown</button>
+            <button id="stopCountdownBtn" onclick="stopCountdownTimer()">Stop Countdown</button>
+            <button id="resetCountdownBtn" onclick="resetCountdownTimer()">Reset Countdown</button>
+        </div>
+    </div>
+
+    <button id="backToTimerBtn" onclick="window.location.href='index.html'">Back to Timer</button>
+
+    <script src="stopwatch.js"></script>
+    <audio id="alertSound" src="alert.mp3"></audio>
+</body>
+</html>

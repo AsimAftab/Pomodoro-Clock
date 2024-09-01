@@ -18,91 +18,10 @@ h2 {
     top: -20px; /* Shift up */
 }
 
-.input-container, .task-container {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 10px; /* Reduced margin */
-}
-
-.input-container label {
-    color: #f1f1f1;
-    font-size: 1em;
-    margin-right: 5px;
-}
-
-.input-container input, .task-container input {
-    width: 80px;
-    padding: 10px;
-    border: 2px solid #555;
-    border-radius: 10px;
-    background: #444;
-    color: white;
-    font-size: 1.2em;
-    text-align: center;
-    transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-.input-container input:focus, .task-container input:focus {
-    background: #555;
-    border-color: #f39c12;
-    outline: none;
-}
-
-.task-container {
-    margin-bottom: 20px; /* Adjust margin */
-}
-
-#taskInput {
-    width: 200px;
-    padding: 10px;
-    border: 2px solid #555;
-    border-radius: 10px;
-    background: #444;
-    color: white;
-    font-size: 1.2em;
-    transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-#addTaskBtn {
-    padding: 10px 20px;
-    background-color: #f39c12;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#addTaskBtn:hover {
-    background-color: #e67e22;
-}
-
-.task-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 300px; /* Set a max width for the task list */
-}
-
-.task-list li {
-    background: #444;
-    padding: 15px;
-    margin: 5px 0;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.task-list li:hover {
-    background: #555;
-    transform: translateY(-2px); /* Slight hover lift effect */
-}
-
 .timer-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px; /* Adjust margin */
+    margin-bottom: 20px;
 }
 
 .timer {
@@ -125,7 +44,7 @@ h2 {
 }
 
 .controls {
-    margin-top: 10px; /* Adjust margin */
+    margin-bottom: 20px;
 }
 
 button {
@@ -151,3 +70,127 @@ button#breakBtn {
 button:hover {
     background-color: #666;
 }
+
+.task-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput, #taskTimeInput {
+    width: 150px;
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    background: #444;
+    color: white;
+    font-size: 1.2em;
+}
+
+#addTaskBtn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #e67e22;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 300px; /* Set a max width for the task list */
+    max-height: 200px; /* Limit height to allow scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.task-list li {
+    background: #444;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.task-list li:hover {
+    background: #555;
+    transform: translateY(-2px); /* Slight hover lift effect */
+}
+
+.remove-task {
+    background: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-task:hover {
+    background: #c0392b;
+}
+
+/* Existing CSS */
+
+.stopwatch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.stopwatch {
+    display: flex;
+    border: 1px solid #555;
+    border-radius: 15px;
+    padding: 20px;
+    background: #222;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stopwatch .time {
+    margin: 0 15px;
+    font-size: 4em;
+    background: #444;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.stopwatch-controls {
+    margin-top: 10px;
+}
+
+.stopwatch-controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.stopwatch-controls button#resetStopwatchBtn {
+    background-color: #e74c3c;
+}
+
+.stopwatch-controls button:hover {
+    background-color: #666;
+}
+

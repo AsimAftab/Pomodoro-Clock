@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: #333;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #f1f1f1;
+}
+
+/* Countdown Container */
+.countdown-container {
+    text-align: center;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.time {
+    width: 80px;
+    height: 80px;
+    background: #444;
+    color: white;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Countdown Controls */
+.countdown-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.countdown-controls input {
+    width: 100px;
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    background: #444;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.countdown-controls input:focus {
+    background: #555;
+    border-color: #f39c12;
+    outline: none;
+}
+
+.countdown-controls button {
+    padding: 10px 20px;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.countdown-controls button:hover {
+    background-color: #666;
+}
+
+#startCountdownBtn {
+    background-color: #27ae60;
+}
+
+#stopCountdownBtn {
+    background-color: #e74c3c;
+}
+
+#resetCountdownBtn {
+    background-color: #f39c12;
+}
+
+#startCountdownBtn:hover {
+    background-color: #2ecc71;
+}
+
+#stopCountdownBtn:hover {
+    background-color: #c0392b;
+}
+
+#resetCountdownBtn:hover {
+    background-color: #e67e22;
+}
+
+/* Back Button */
+#backToTimerBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#backToTimerBtn:hover {
+    background-color: #2980b9;
+}

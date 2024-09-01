@@ -65,18 +65,30 @@ function playAlertSound() {
 
 function addTask() {
     const taskInput = document.getElementById("taskInput");
+    const taskTimeInput = document.getElementById("taskTimeInput");
     const taskList = document.getElementById("taskList");
 
     const taskText = taskInput.value.trim();
-    if (taskText) {
+    const taskTime = parseInt(taskTimeInput.value) || 0;
+
+    if (taskText && taskTime > 0) {
         const li = document.createElement("li");
-        li.textContent = taskText;
-        li.onclick = () => focusTask(taskText);
+        li.innerHTML = `
+            ${taskText} - ${taskTime} mins
+            <button class="remove-task" onclick="removeTask(this)">Remove</button>
+        `;
+        li.onclick = () => {
+            totalSeconds = taskTime * 60; // Convert minutes to seconds
+            updateTimerUI();
+            startCountdown();
+        };
         taskList.appendChild(li);
         taskInput.value = "";
+        taskTimeInput.value = "";
     }
 }
 
-function focusTask(taskText) {
-    document.getElementById("title").innerText = "Focusing on: " + taskText;
+function removeTask(button) {
+    const taskList = document.getElementById("taskList");
+    taskList.removeChild(button.parentElement);
 }
